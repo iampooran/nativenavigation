@@ -1,9 +1,23 @@
 import {StyleSheet, ScrollView, Image, Text, View} from 'react-native';
-import React, {useState} from 'react';
-import MOCK_DATA from './MOCK_DATA.json';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios';
 
 const Order = () => {
-  const [product] = useState(MOCK_DATA);
+  const [product, setProducts] = useState<any[]>([]);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('https://fakestoreapi.com/products');
+      setProducts(response.data);
+      console.log('Api Working');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <ScrollView style={styles.container}>

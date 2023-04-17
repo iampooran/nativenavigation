@@ -7,7 +7,6 @@ const Home = ({navigation}: {navigation: any}) => {
   const [isValid, setIsValid] = useState(true);
 
   const handleLogin = () => {
-    console.log(userName.length);
     if (userName.length === 0 || password.length === 0) {
       setIsValid(false);
     } else {
