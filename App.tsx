@@ -5,6 +5,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import Home from './src/components/Home/Home';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Authenticated from './src/components/Authenticated/Authenticated';
+import MaterialBottomTab from './src/components/MaterialBottomTab/MaterialBottomTab';
+import NavigationOptions from './src/components/NavigationOptions/NavigationOptions';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +19,16 @@ function App(): JSX.Element {
           name="Authenticated"
           component={Authenticated}
           options={{title: 'Authenticated'}}
+        />
+        <Stack.Screen
+          name="MaterialBottomTab"
+          component={MaterialBottomTab}
+          options={{title: 'MaterialBottomTab'}}
+        />
+        <Stack.Screen
+          name="NavigationOption"
+          component={NavigationOptions}
+          options={{title: 'NavigationOption'}}
         />
       </Stack.Navigator>
     </NavigationContainer>

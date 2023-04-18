@@ -11,7 +11,7 @@ const Home = ({navigation}: {navigation: any}) => {
       setIsValid(false);
     } else {
       setIsValid(true);
-      navigation.navigate('Authenticated');
+      navigation.navigate('NavigationOption');
     }
   };
 
