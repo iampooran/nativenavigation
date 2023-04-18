@@ -9,6 +9,9 @@ const NavigationOptions = ({navigation}: {navigation: any}) => {
   const handleMaterialBottomTab = () => {
     navigation.navigate('MaterialBottomTab');
   };
+  const handleMaterialTopTab = () => {
+    navigation.navigate('MaterialTopTab');
+  };
 
   return (
     <View style={styles.container}>
@@ -16,6 +19,10 @@ const NavigationOptions = ({navigation}: {navigation: any}) => {
       <Button
         title="Go To Material Bottom Tab"
         onPress={() => handleMaterialBottomTab()}
+      />
+      <Button
+        title="Go To MaterialTopTab"
+        onPress={() => handleMaterialTopTab()}
       />
     </View>
   );
