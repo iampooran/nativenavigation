@@ -2,8 +2,8 @@ import {Text, View, TextInput, StyleSheet, Button} from 'react-native';
 import React, {useState} from 'react';
 
 const Home = ({navigation}: {navigation: any}) => {
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
+  const [userName, setUserName] = useState('name');
+  const [password, setPassword] = useState('password');
   const [isValid, setIsValid] = useState(true);
 
   const handleLogin = () => {
