@@ -13,6 +13,10 @@ const NavigationOptions = ({navigation}: {navigation: any}) => {
     navigation.navigate('MaterialTopTab');
   };
 
+  const handleDrawerNavigate = () => {
+    navigation.navigate('DrawerNavigate');
+  };
+
   return (
     <View style={styles.container}>
       <Button title="Go To Bottom Tab" onPress={() => handleBottomTab()} />
@@ -23,6 +27,10 @@ const NavigationOptions = ({navigation}: {navigation: any}) => {
       <Button
         title="Go To MaterialTopTab"
         onPress={() => handleMaterialTopTab()}
+      />
+      <Button
+        title="Go To DrawerNavigate"
+        onPress={() => handleDrawerNavigate()}
       />
     </View>
   );

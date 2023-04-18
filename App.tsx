@@ -8,6 +8,7 @@ import Authenticated from './src/components/Authenticated/Authenticated';
 import MaterialBottomTab from './src/components/MaterialBottomTab/MaterialBottomTab';
 import NavigationOptions from './src/components/NavigationOptions/NavigationOptions';
 import MaterialTopTab from './src/components/MaterialTopTab/MaterialTopTab';
+import DrawerNavigate from './src/components/DrawerNavigate/DrawerNavigate';
 
 const Stack = createNativeStackNavigator();
 
@@ -35,6 +36,11 @@ function App(): JSX.Element {
           name="MaterialTopTab"
           component={MaterialTopTab}
           options={{title: 'MaterialTopTab'}}
+        />
+        <Stack.Screen
+          name="DrawerNavigate"
+          component={DrawerNavigate}
+          options={{title: 'DrawerNavigate'}}
         />
       </Stack.Navigator>
     </NavigationContainer>
